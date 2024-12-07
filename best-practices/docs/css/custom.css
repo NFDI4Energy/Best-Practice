@@ -5,3 +5,7 @@
 .navbar.bg-primary {
     background-image: none !important;  /* mkdocs also has bg-image, bg color doesn't reflect if it is not removed */
 }
+
+.nav-link[rel="prev"], .nav-link[rel="next"] { /* removed header pagination */
+    display: none !important;
+}
