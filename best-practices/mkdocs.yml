@@ -1,0 +1,5 @@
+site_name: NFDI Best Practices
+nav:
+  - Home: index.md
+  - FAQ: faq.md
+  - Guidelines: guidelines.md
