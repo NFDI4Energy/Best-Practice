@@ -3,3 +3,5 @@ nav:
   - Home: index.md
   - FAQ: faq.md
   - Guidelines: guidelines.md
+extra_css:
+  - css/custom.css
