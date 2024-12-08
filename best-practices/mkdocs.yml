@@ -1,6 +1,7 @@
 site_name: NFDI Best Practices
 theme:
   name: material
+  logo: images/logo/logo.svg
   palette:
     # default to light theme
     - scheme: default
