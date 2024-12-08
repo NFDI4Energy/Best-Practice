@@ -1,5 +1,7 @@
-:root {
-    --md-primary-fg-color: #3b77a0;
+[data-md-color-scheme="slate"] .container, /* overwriting the text color in dark mode */
+[data-md-color-scheme="slate"] .container * {
+    color: rgba(255, 255, 255, 0.8) !important; /* 0.8 is opacity, otherwise it is poking the eyes */
+    border-color: rgba(255, 255, 255, 0.8) !important; 
 }
 
 /* changing website wide font to system specific as oep */
@@ -15,7 +17,26 @@ code, pre {
     font-family: 'Roboto Mono', 'Courier New', Courier, monospace !important;
 }
 
+.md-header {
+    background-color: #3b77a0;
+}
+
 a.md-header__button.md-logo img {
     height: 30px;
     width: 30px;
+}
+
+.md-main__inner.md-grid {
+    margin-top: 0px !important;
+}
+
+.md-content__inner.md-typeset {
+    padding-top: 0px !important
+}
+
+@media (max-width: 860px) {
+    .container .grid-container {
+        grid-template-columns: 1fr !important; 
+        gap: 20px !important; 
+    }
 }
