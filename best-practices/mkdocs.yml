@@ -1,7 +1,9 @@
 site_name: NFDI Best Practices
-nav:
-  - Home: index.md
-  - FAQ: faq.md
-  - Guidelines: guidelines.md
+theme:
+  name: material
+  palette:
+    scheme: default
+    primary: custom
+    accent: custom
 extra_css:
-  - css/custom.css
+  - stylesheets/extra.css
