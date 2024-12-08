@@ -2,8 +2,19 @@ site_name: NFDI Best Practices
 theme:
   name: material
   palette:
-    scheme: default
-    primary: custom
-    accent: custom
+    # default to light theme
+    - scheme: default
+      primary: custom # oep primary color
+      accent: custom
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    # dark mode
+    - scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
 extra_css:
   - stylesheets/extra.css
