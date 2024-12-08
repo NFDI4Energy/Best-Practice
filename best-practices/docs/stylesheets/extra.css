@@ -1,3 +1,16 @@
 :root {
     --md-primary-fg-color: #3b77a0;
 }
+
+/* changing website wide font to system specific as oep */
+*,
+*::before,
+*::after {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+    box-sizing: border-box;
+}
+
+/* code blocks takes Roboto Mono font */
+code, pre {
+    font-family: 'Roboto Mono', 'Courier New', Courier, monospace !important;
+}
