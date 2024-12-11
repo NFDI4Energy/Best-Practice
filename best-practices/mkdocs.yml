@@ -1,8 +1,13 @@
 site_name: NFDI Best Practices
+nav:
+  - Home: index.md
+  - FAQ: faq.md
+  - Guidelines: guidelines.md
 theme:
   name: material
   logo: images/logo/logo.svg
   favicon: images/logo/logo.svg
+  custom_dir: overrides
   palette:
     # default to light theme
     - media: "(prefers-color-scheme: light)"
