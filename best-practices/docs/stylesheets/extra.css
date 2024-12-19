@@ -58,10 +58,20 @@ a.md-header__button.md-logo img {
     color: #83A2B6;
 }
 
+.md-nav__title {
+    background-color: #3b77a0 !important;
+}
+
 @media (max-width: 860px) {
     .container .grid-container {
         grid-template-columns: 1fr !important; 
         gap: 20px !important; 
+    }
+}
+
+@media screen and (max-width: 76.1875em) {
+    .md-header__title .md-header__topic {
+      display: none;
     }
 }
 
