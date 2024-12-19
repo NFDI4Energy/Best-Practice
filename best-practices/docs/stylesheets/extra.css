@@ -34,6 +34,30 @@ a.md-header__button.md-logo img {
     padding-top: 0px !important
 }
 
+.md-footer-meta{
+    height: 178px;
+    background-color: #3b77a0;
+}
+
+.footer-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+}
+
+.footer-title {
+    font-size: 16px;
+    color: #FFFFFF;
+    font-weight: 600;
+}
+
+.footer-link {
+    font-weight: 200;
+    font-size: 14px;
+    color: #83A2B6;
+}
+
 @media (max-width: 860px) {
     .container .grid-container {
         grid-template-columns: 1fr !important; 
