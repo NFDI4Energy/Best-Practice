@@ -29,19 +29,21 @@
       {% include ".icons/" ~ icon ~ ".svg" %}
     </label>
 
-
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
-        <!-- Site title for mobile -->
         <div class="md-header__topic">
-          <span class="md-ellipsis">{{ config.site_name }}</span>
+            {% for nav_item in nav %}
+              <span style="margin-right: 32px;" class="md-ellipsis">
+                <a href="{{ nav_item.url | url }}">{{ nav_item.title | e }}</a>
+              </span>
+            {% endfor %}
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
-          {% for nav_item in nav %}
-            <span style="margin-right: 32px;" class="md-ellipsis">
-              <a href="{{ nav_item.url | url }}">{{ nav_item.title | e }}</a>
-            </span>
-          {% endfor %}
+            {% for nav_item in nav %}
+                <span style="margin-right: 32px;" class="md-ellipsis">
+                  <a href="{{ nav_item.url }}">{{nav_item.title}}</a>
+                </span>
+            {% endfor %}
         </div>
       </div>
     </div>

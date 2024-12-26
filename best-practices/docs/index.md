@@ -24,7 +24,7 @@ hide:
             </p>
           </div>
           <div>
-            <button style="cursor: pointer" >
+            <button onclick="window.location.href='nfdi4ing.md'" style="cursor: pointer" >
               <img src="./images/logo/Learn_More_button.svg" />
             </button>
           </div>
