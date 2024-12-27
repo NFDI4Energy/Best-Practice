@@ -24,8 +24,8 @@ hide:
             </p>
           </div>
           <div>
-            <button onclick="window.location.href='nfdi4ing.md'" style="cursor: pointer" >
-              <img src="./images/logo/Learn_More_button.svg" />
+            <button onclick="window.location.href='nfdi4ing/01_bp/'" style="cursor: pointer">
+              <img src="./images/logo/Learn_More_button.svg" alt="Learn More" />
             </button>
           </div>
         </div>
@@ -39,7 +39,7 @@ hide:
             </p>
           </div>
           <div>
-            <button style="cursor: pointer" >
+            <button onclick="window.location.href='nfdi4ds/'" style="cursor: pointer" >
               <img src="./images/logo/Learn_More_button.svg" />
             </button>
           </div>
@@ -54,7 +54,7 @@ hide:
             </p>
           </div>
           <div>
-            <button style="cursor: pointer" >
+            <button onclick="window.location.href='nfdi4earth/'" style="cursor: pointer" >
               <img src="./images/logo/Learn_More_button.svg" />
             </button>
           </div>
@@ -69,7 +69,7 @@ hide:
             </p>
           </div>
           <div>
-            <button style="cursor: pointer" >
+            <button onclick="window.location.href='nfdi4cs/'" style="cursor: pointer" >
               <img src="./images/logo/Learn_More_button.svg" />
             </button>
           </div>
