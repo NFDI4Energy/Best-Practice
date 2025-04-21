@@ -64,22 +64,21 @@
     <!-- Further information -->
     <div class="md-footer-meta md-typeset" style="display: flex; justify-content: center;">
         <div class="footer" style="display: flex; justify-content: center; gap: 100px; margin: 19.5px 0;">
-          <div class="footer-section partners-contact">
-            <div class="footer-title">Partners and Contact</div>
-            <a href="" class="footer-link">Consortium in the NFDI e.V.</a>
-            <a href="" class="footer-link">Funded Consortium</a>
-            <a href="" class="footer-link">Contact</a>
-          </div>
-          <div class="footer-section legals">
-            <div class="footer-title">Legals</div>
-            <a href="" class="footer-link">Imprint and Data Privacy Statement</a>
-            <a href="" class="footer-link">Legals UniOldenburg</a>
-          </div>
-          <div class="footer-section follow-us">
-            <div class="footer-title">Follow us</div>
-            <a href="" class="footer-link">Linkedin</a>
-            <a href="" class="footer-link">Facebook</a>
-          </div>
+            <div class="footer-section partners-contact">
+                <div class="footer-title">Partners and Contact</div>
+                <a href="{{ 'footer/partners/consortium' | url }}" class="footer-link">Consortium in the NFDI e.V.</a>
+                <a href="{{ 'footer/partners/funded-consortium' | url }}" class="footer-link">Funded Consortium</a>
+                <a href="{{ 'footer/contact' | url }}" class="footer-link">Contact</a>
+            </div>
+            <div class="footer-section legals">
+                <div class="footer-title">Legals</div>
+                <a href="{{ 'footer/legal/imprint' | url }}" class="footer-link">Imprint and Data Privacy Statement</a>
+                <a href="https://www.uol.de/en/imprint" class="footer-link" target="_blank" rel="noopener">Legals UniOldenburg</a>
+            </div>
+            <div class="footer-section follow-us">
+                <div class="footer-title">Follow us</div>
+                <a href="https://www.linkedin.com/company/nfdi4energy/" class="footer-link">Linkedin</a>
+            </div>
         </div>
         <!-- Social links -->
         {% if config.extra.social %}

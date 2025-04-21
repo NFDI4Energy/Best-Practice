@@ -23,3 +23,9 @@ theme:
         name: Switch to light mode
 extra_css:
   - stylesheets/extra.css
+
+hooks:
+  - hooks.py
+
+extra:
+  api_url: "https://service.tib.eu/sandbox/nfdi4energyannotator/annotate"
