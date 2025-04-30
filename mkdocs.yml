@@ -1,0 +1,31 @@
+site_name: NFDI Best Practices
+nav:
+  - Home: index.md
+  - FAQ: faq.md
+  - Guidelines: guidelines.md
+theme:
+  name: material
+  logo: images/logo/logo.svg
+  favicon: images/logo/logo.svg
+  custom_dir: overrides
+  palette:
+    # default to light theme
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    # dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+extra_css:
+  - stylesheets/extra.css
+
+hooks:
+  - hooks.py
+
+extra:
+  api_url: "https://service.tib.eu/sandbox/nfdi4energyannotator/annotate"

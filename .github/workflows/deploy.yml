@@ -1,0 +1,35 @@
+name: Deploy MkDocs to GitHub Pages
+
+on:
+  push:
+    branches:
+      - develop-mkdocs  # Trigger this workflow on push to the develop branch
+  pull_request:
+    branches:
+      - develop-mkdocs  # Also trigger on pull requests to the develop branch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.9'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install mkdocs mkdocs-material
+
+    - name: Build the MkDocs site
+      run: mkdocs build
+
+    - name: Deploy to GitHub Pages
+      run: mkdocs gh-deploy --force
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
