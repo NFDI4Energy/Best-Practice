@@ -1,5 +1,6 @@
 import requests
 import re
+import random
 
 def extract_annotation_blocks(markdown):
 
@@ -48,6 +49,10 @@ def get_ontology_annotations(config, ontology_id, text):
         return text
 
 def wrap_terms_in_span(text, matches):
+    pastel_colors = [
+        "#FFD6E0", "#FFEFCF", "#DCEDC2", "#A8E6CE", "#DCEDC2", 
+        "#FFD3B5", "#D5E5F2", "#E0F7FA", "#FFF9C4", "#F8BBD0"
+    ]
     
     cleaner_matches = [{'term': m['token'],'matched_term': m['matched_term'], 'start': m['start'], 'end': m['end'], 'iri': m['iri']} for m in matches]
     sorted_matches = sorted(cleaner_matches, key=lambda m: (-len(m['matched_term']), -m['start']))
@@ -80,7 +85,8 @@ def wrap_terms_in_span(text, matches):
     
     for match in modifications:
         result += text[last_end:match['start']]
-        result += f"<a href={match['iri']} style='border-bottom: 1px dotted #666; text-decoration: none;'>{match['term']}</a>"
+        random_color = random.choice(pastel_colors)
+        result += f"<a href=\"{match['iri']}\" style='background-color: {random_color}; color: #333; text-decoration: none; padding: 0 3px; border-radius: 3px;'>{text[match['start']:match['end']]}</a>"
         last_end = match['end']
     
     result += text[last_end:]

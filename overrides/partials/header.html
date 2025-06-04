@@ -34,14 +34,26 @@
         <div class="md-header__topic">
             {% for nav_item in nav %}
               <span style="margin-right: 32px;" class="md-ellipsis">
-                <a href="{{ nav_item.url | url }}">{{ nav_item.title | e }}</a>
+                {% if nav_item.children %}
+                  <a href="{{ (nav_item.children | first).url | url }}">{{ nav_item.title | e }}</a>
+                {% elif nav_item.url %}
+                  <a href="{{ nav_item.url | url }}">{{ nav_item.title | e }}</a>
+                {% else %}
+                  {{ nav_item.title | e }}
+                {% endif %}
               </span>
             {% endfor %}
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
             {% for nav_item in nav %}
                 <span style="margin-right: 32px;" class="md-ellipsis">
-                  <a href="{{ nav_item.url }}">{{nav_item.title}}</a>
+                  {% if nav_item.children %}
+                    <a href="{{ (nav_item.children | first).url | url }}">{{ nav_item.title | e }}</a>
+                  {% elif nav_item.url %}
+                    <a href="{{ nav_item.url | url }}">{{ nav_item.title | e }}</a>
+                  {% else %}
+                    {{ nav_item.title | e }}
+                  {% endif %}
                 </span>
             {% endfor %}
         </div>
