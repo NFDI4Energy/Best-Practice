@@ -2,7 +2,9 @@ site_name: NFDI Best Practices
 nav:
   - Home: index.md
   - FAQ: faq.md
-  - Guidelines: guidelines.md
+  - Guidelines:
+    - Introduction: guidelines.md
+    - Python Package open-mastr: open-mastr.md
 theme:
   name: material
   logo: images/logo/logo.svg
