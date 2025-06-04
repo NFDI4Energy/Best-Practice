@@ -3,10 +3,10 @@ name: Deploy MkDocs to GitHub Pages
 on:
   push:
     branches:
-      - develop-mkdocs  # Trigger this workflow on push to the develop branch
+      - main
   pull_request:
     branches:
-      - develop-mkdocs  # Also trigger on pull requests to the develop branch
+      - main
 
 jobs:
   deploy:

@@ -33,7 +33,7 @@ def get_ontology_annotations(config, ontology_id, text):
         
         response.raise_for_status()
         response_data = response.json()
-        print(f"Response from {ontology_id} ontology: {response_data}")
+        # print(f"Response from {ontology_id} ontology: {response_data}")
 
         if 'matches' in response_data and isinstance(response_data['matches'], list):
             text_with_spans = wrap_terms_in_span(text, response_data['matches'])
@@ -49,7 +49,7 @@ def get_ontology_annotations(config, ontology_id, text):
 
 def wrap_terms_in_span(text, matches):
     
-    cleaner_matches = [{'matched_term': m['matched_term'], 'start': m['start'], 'end': m['end'], 'iri': m['iri']} for m in matches]
+    cleaner_matches = [{'term': m['token'],'matched_term': m['matched_term'], 'start': m['start'], 'end': m['end'], 'iri': m['iri']} for m in matches]
     sorted_matches = sorted(cleaner_matches, key=lambda m: (-len(m['matched_term']), -m['start']))
 
     modified_positions = set()
@@ -80,8 +80,8 @@ def wrap_terms_in_span(text, matches):
     
     for match in modifications:
         result += text[last_end:match['start']]
-        result += f"<a href={match['iri']} style='border-bottom: 1px dotted #666; text-decoration: none;'>{match['matched_term']}</a> "
-        last_end = match['end'] + 1
+        result += f"<a href={match['iri']} style='border-bottom: 1px dotted #666; text-decoration: none;'>{match['term']}</a>"
+        last_end = match['end']
     
     result += text[last_end:]
     
